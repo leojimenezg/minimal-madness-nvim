@@ -1,6 +1,6 @@
 # Minimal Madness Nvim
 
-A minimalist Neovim colorscheme inspired by Gruber Darker, designed for developers who prefer clean, distraction-free coding environments with subtle but meaningful color distinctions where they matter most.
+A minimalist Neovim colorscheme inspired by Gruber Darker. Clean, distraction-free coding with subtle color distinctions where they matter.
 
 ---
 
