@@ -13,7 +13,7 @@ M.config = {
 }
 
 function M.load()
-	local colors = require("minimal-madness.colors")
+	local colors = require("minimal-madness-nvim.colors")
 	colors = vim.tbl_deep_extend("force", colors, M.config.overrides)  -- Combine colors.
 	vim.cmd("highlight clear")
 	if vim.fn.exists("syntax_on") then
