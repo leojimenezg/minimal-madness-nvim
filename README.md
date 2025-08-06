@@ -23,7 +23,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim) (recommended)
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme("minimal-madness")
+    vim.cmd.colorscheme("minimal-madness-nvim")
   end,
 }
 ```
@@ -33,7 +33,7 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 use {
   "leojimenezg/minimal-madness-nvim",
   config = function()
-    vim.cmd.colorscheme("minimal-madness")
+    vim.cmd.colorscheme("minimal-madness-nvim")
   end
 }
 ```
@@ -41,9 +41,32 @@ use {
 Using [vim-plug](https://github.com/junegunn/vim-plug)
 ```lua
 Plug 'leojimenezg/minimal-madness-nvim'
-colorscheme minimal-madness
+colorscheme minimal-madness-nvim
 ```
 
+### Configuration (Optional)
+You can customize the colorscheme by calling the `setup()` function before applying the colorscheme:
+```lua
+{
+  "leojimenezg/minimal-madness-nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("minimal-madness-nvim").setup({
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = false },
+        functions = { italic = false, bold = false },
+        variables = { italic = false },
+        headings = { bold = false },
+      },
+      transparent_background = false,
+      overrides = {},
+    })
+    vim.cmd.colorscheme("minimal-madness-nvim")
+  end,
+}
+```
 
 ## Requirements
 
